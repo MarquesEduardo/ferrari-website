@@ -23,10 +23,13 @@
     <meta name="theme-color" content="#E1DEDD"/>
     <meta name="description" content="Conheça a Ferrari Auto Center"/>
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css"/>
-    <title>Ferrari - HCode Lab</title>
+    <title>Ferrari</title>
 </head>
-<body class="open-menu">
+
+<body>
+
     <header id="header">
+
         <div class="overlay"></div>
         <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" class="logo" alt="Logo Ferrari" /></a>
         <button type="button" id="btn-open">
@@ -37,8 +40,13 @@
             </svg>
         </button>
 
-        <div class="menu">
+        <div class="menu logged">
             <nav>
+                <button type="button" id="btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>
+                        </svg>
+                    </button>
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="index.html#Service">Revisão</a></li>
@@ -51,6 +59,7 @@
                 </ul>
             </nav>
         </div>
+
         <div class="footer">
             <hr />
             <div>
@@ -67,7 +76,11 @@
             </div>
             <a href="auth.html" class="btn-register">Minha Conta</a>
         </div>
+
         <hr class="italy" />
+        
     </header>
+
 </body>
+
 </html>
