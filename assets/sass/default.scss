@@ -6,23 +6,33 @@
     font-weight: 400;
 }
 
-body, div, article, aside, header, footer, main, div, span, nav, section, ol, ul, li, button, figure, img, picture {
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr {
     display: flex;
 }
 
 body {
     margin: 0;
-    background-color: var(--bg-color);
     flex-direction: column;
+    background-color: var(--bg-color);
+    > main {
+        min-height: calc(100vh - 400px);
+    }
 }
 
 hr {
     &.divider {
-        background-color: var(--gray-3);
+        background-color:  var(--gray-3);
         height: 1px;
         width: calc(100% - 2em);
         margin: 3em 0;
         border: none;
         align-self: center;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        > main {
+            min-height: calc(100vh - 341px);
+        }
     }
 }
