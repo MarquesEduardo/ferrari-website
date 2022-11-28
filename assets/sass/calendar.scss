@@ -40,6 +40,7 @@
         color: var(--gray-0);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+       
         li {
             justify-content: center;
             padding: 8px 0;
@@ -50,7 +51,7 @@
     .days {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(5, 12vw);
+        grid-template-rows:  repeat(5, 12vw);
         grid-gap: 10px;
         color: var(--dark-0);
         li {
@@ -68,27 +69,27 @@
                 background-color: var(--blue);
                 color: var(--white);
                 &:hover {
-                    background-color: var(--blue-hover); 
+                    background-color: var(--blue-hover);
                 }
                 &:active {
-                    background-color: var(--blue-active); 
+                    background-color: var(--blue-active);
                 }
             }
             &.selected {
                 background-color: var(--green);
                 color: var(--white);
                 &:hover {
-                    background-color: var(--green-hover); 
+                    background-color: var(--green-hover);
                 }
                 &:active {
-                    background-color: var(--green-active); 
+                    background-color: var(--green-active);
                 }
             }
         }
     }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .calendar {
         max-width: 992px;
         .month {
@@ -100,7 +101,7 @@
                 display: flex;
             }
         }
-        .weedays {
+        .weekdays {
             li {
                 font-size: 21px;
                 font-weight: bold;
@@ -110,6 +111,7 @@
             grid-template-rows: repeat(5, calc(992px / 7));
             li {
                 font-size: 38px;
+
             }
         }
     }
