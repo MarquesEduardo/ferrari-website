@@ -1,0 +1,123 @@
+#auth {
+    min-width: 300px;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .hide {
+        display: none;
+    }
+    > section {
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        a {
+            display: contents;
+            img {
+                position: absolute;
+                width: 100px;
+                top: 40px;
+                z-index: 1;
+            }
+            }
+            p {
+                color: var(--gray-9);
+
+            }
+            form {
+                margin-top: 170px;
+                position: relative;
+                width: 100vw;
+                left: 0;
+                .message {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        margin-right: 5px;
+                    }
+                    span {
+                        font-weight: 600;
+                        color: var(--dark-0);
+                    }
+                }
+                h1 {
+                    text-align: center;
+                    color: var(--green);
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin: 10px auto;
+                }
+                hr {
+                    border: none;
+                    border-top:4px solid var(--red);
+                    width: 68px;
+                    margin-bottom: 38px;
+
+                }
+                .field {
+                    width: 100%;
+
+                }
+                .actions {
+                    justify-content: space-between;
+
+                    > div {
+                        flex-direction: column;
+                        a {
+                            display: flex;
+                        }
+                    }
+                    .link {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--dark-0);
+                        text-decoration: none;
+                        &+.link {
+                            margin-top: 10px;
+                        }
+                        &:hover {
+                            color: var(--gray-11);
+
+                        }
+                        &:active {
+                            color: var(--black);
+                        }
+                    }
+                }
+                &.forget {
+                    .actions {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+}
+
+@media (min-width: 500px) {
+    #auth {
+        height: initial;
+        min-height: 100vh;
+        >section {
+            width: 500px;
+            height: initial;
+            a {
+                img {
+                    top: 25px;
+                }
+            }
+            form {
+                border: var(--gray-8) 1px solid;
+                border-radius: 10px;
+                width: 100%;
+                padding: 50px;
+                padding-top: 100px;
+                margin-top: 100px;
+            }
+        }
+    }
+}
