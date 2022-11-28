@@ -1,36 +1,36 @@
 @font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans";
+  src: local("Open Sans Regular", url("../fonts/OpenSans-Regular.ttf") format("true-type"));
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans";
+  src: local("Open Sans Light", url("../fonts/OpenSans-Light.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: local("Open Sans SemiBold", url("../fonts/OpenSans-SemiBold.ttf") format("true-type"));
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-family: "OpenSans";
+  src: local("Open Sans Bold", url("../fonts/OpenSans-Bold.ttf") format("true-type"));
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
   font-family: "Nothing";
-  src: local("Nothing You Could Do"), url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+  src: local("Nothing You Could Do", url("../fonts/NothingYouCouldDo-Regular.ttf") format("true-type"));
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Teko";
-  src: local("Teko"), url("../fonts/Teko-Regular.ttf") format("truetype");
+  src: local("Teko", url("../fonts/Teko-Regular.ttf") format("true-type"));
   font-style: normal;
   font-weight: 400;
 }
@@ -44,14 +44,14 @@
   --black-75: #000000bf;
   --dark-0: #333;
   --dark-1: #000000BF;
-  --gray: #79756C;
+  --gray: #79756c;
   --gray-0: #707070;
-  --gray-1: #7E7E7E;
+  --gray-1: #7e7e7e;
   --gray-2: #9A9A99;
   --gray-3: #CCC;
   --gray-4: #00000029;
   --gray-5: #E5E3DFBF;
-  --gray-6: #F8F8F8;
+  --gray-6: #D8D8D8;
   --gray-7: #E5E3DF;
   --gray-8: #DDD;
   --gray-9: #999;
@@ -64,9 +64,9 @@
   --green: #00994D;
   --green-hover: #00BE60;
   --green-active: #00773C;
-  --blue: #00A0E6;
+  --blue: #199BD4;
   --blue-hover: #1CABE9;
-  --blue-active: #199BD4;
+  --blue-active: #00A0E6;
   --success: #D4EDDA;
   --success-border: #C3E6CB;
   --success-color: #155724;
@@ -126,13 +126,13 @@ hr.divider {
   top: 0;
   right: 0;
   padding: 16px;
+  margin: 15px;
   background: none;
   border: none;
-  font-size: 32px;
-  transition: 0.3s;
+  font-size: 12px;
+  transition: -3s;
   color: var(--black-50);
   min-width: 50px;
-  margin: 15px;
 }
 .toast .close:hover {
   color: var(--black-75);
@@ -239,7 +239,7 @@ form button:active {
 
 @media (min-width: 1200px) {
   form {
-    max-width: 400px;
+    max-width: 480px;
   }
   form .fields {
     flex-direction: row;
@@ -285,9 +285,100 @@ header.page-title hr {
   margin: var(--space);
   width: calc(100% - var(--space) * 2);
 }
+.page aside, .page aside.open {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  bottom: 80px;
+  height: 50px;
+  background-color: var(--gray-12);
+  border-bottom: var(--gray-3) 1px solid;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.page aside header, .page aside.open header {
+  font-size: 2em;
+  color: var(--dark-0);
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.page aside section, .page aside.open section {
+  padding: 0 var(--space);
+  display: none;
+  flex: 1;
+  max-height: calc(100vh - 339px);
+  overflow-y: auto;
+}
+.page aside section table, .page aside.open section table {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: var(--gray-3) 1px solid;
+}
+.page aside section table td, .page aside.open section table td {
+  padding: var(--space) 0;
+  border-top: var(--gray-3) 1px solid;
+}
+.page aside section table td.price, .page aside.open section table td.price {
+  text-align: right;
+}
+.page aside footer, .page aside.open footer {
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space);
+  font-size: 18px;
+  color: var(--dark-0);
+}
+.page aside footer .total, .page aside.open footer .total {
+  font-weight: bold;
+  margin-left: var(--space);
+  text-align: right;
+}
+.page aside footer button, .page aside.open footer button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  min-width: 50px;
+  width: 50px;
+}
+.page aside footer button:hover, .page aside.open footer button:hover {
+  background-color: var(--black-10);
+}
+.page aside footer button:active, .page aside.open footer button:active {
+  background-color: var(--black-75);
+}
+.page aside footer button svg, .page aside.open footer button svg {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+.page aside.open, .page aside.open.open {
+  height: calc(100vh - 158px);
+}
+.page aside.open header, .page aside.open section, .page aside.open.open header, .page aside.open.open section {
+  display: flex;
+}
+.page aside.open footer button svg, .page aside.open.open footer button svg {
+  transform: rotate(180deg);
+}
 .page > header {
   width: 100%;
-  min-height: 130px;
+  min-width: 130px;
   background-color: var(--black);
   color: var(--white);
   justify-content: center;
@@ -296,8 +387,14 @@ header.page-title hr {
 }
 .page > header h1 {
   font-size: 23px;
+  padding-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
+}
+.page > header h1 small {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
 }
 .page > main {
   margin-bottom: 80px;
@@ -316,7 +413,7 @@ header.page-title hr {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: var(--gray-12);
+  background-color: var(--grey-12);
   height: 80px;
   left: 0;
   justify-content: space-between;
@@ -464,6 +561,33 @@ header.page-title hr {
   .page > header h1 {
     font-size: 32px;
   }
+  .page aside {
+    width: 375px;
+    height: calc(100vh - 118px);
+    bottom: 0;
+    z-index: 4;
+  }
+  .page aside header, .page aside section {
+    display: flex;
+  }
+  .page aside header {
+    height: 160px;
+  }
+  .page aside footer {
+    height: 80px;
+  }
+  .page aside footer div {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+  }
+  .page aside footer div .total {
+    font-size: 29px;
+  }
+  .page aside footer button {
+    display: none;
+  }
   .page footer.fixed {
     justify-content: flex-start;
   }
@@ -598,7 +722,7 @@ header.page-title hr {
   .calendar .month .btn-today {
     display: flex;
   }
-  .calendar .weedays li {
+  .calendar .weekdays li {
     font-size: 21px;
     font-weight: bold;
   }
@@ -657,6 +781,7 @@ header.page-title hr {
 }
 #header .menu.logged nav ul li.divider {
   display: flex;
+  padding: 0;
 }
 #header .menu.logged nav ul li.hide-guest {
   display: flex;
@@ -673,12 +798,12 @@ header.page-title hr {
 #header .menu nav ul {
   margin: 0;
   padding: 0;
-  margin-top: 249px;
+  margin-top: 190px;
   width: 100%;
   flex-direction: column;
 }
 #header .menu nav ul li {
-  padding: 14px 0;
+  padding: 10px 0;
   list-style: none;
   justify-content: center;
 }
@@ -913,8 +1038,8 @@ header.page-title hr {
   text-decoration: none;
 }
 #footer .columns ul li.title {
-  font-weight: bold;
   font-size: 20px;
+  font-weight: bold;
 }
 #footer .columns ul li.social {
   align-items: center;
@@ -948,6 +1073,621 @@ header.page-title hr {
   }
   #footer .columns ul li a:hover {
     color: var(--white);
+  }
+}
+#home {
+  flex-direction: column;
+  margin-top: -80px;
+}
+#home header {
+  width: 100%;
+  min-width: 320px;
+  min-height: 675px;
+  height: 100vh;
+  background-image: url("../images/ferrari-vermelha-1200.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+  background-position-y: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--space);
+}
+#home header ul {
+  display: none;
+}
+#home header h1 {
+  color: var(--white);
+  font-size: 80px;
+  font-weight: bold;
+  text-align: right;
+}
+#home header a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  border: var(--white) 2px solid;
+  color: var(--white);
+}
+#home header a:hover {
+  background-color: var(--black-10);
+}
+#home header a:active {
+  background-color: var(--black-75);
+}
+#home header a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+#home .gallery {
+  min-width: 320px;
+  flex-direction: column;
+}
+#home .gallery figure {
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  position: relative;
+}
+#home .gallery figure img {
+  width: 100%;
+}
+#home .gallery figure figcaption {
+  position: absolute;
+  left: 0;
+  bottom: var(--space);
+  background-color: var(--black-75);
+  color: var(--white);
+  padding: var(--space);
+}
+#home .gallery figure figcaption h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+#home .gallery figure figcaption a {
+  margin: 0;
+  font-size: 9px;
+  color: var(--gray-3);
+}
+
+@media (min-width: 576px) {
+  #home .gallery {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    margin-top: -100px;
+  }
+  #home hr {
+    top: 100px;
+  }
+  #home header {
+    max-height: initial;
+    background-image: url("../images/ferrari-vermelha-1200.webp");
+  }
+}
+@media (min-width: 1920px) {
+  #home header {
+    background-image: url("../images/ferrari-vermelha@2x.webp");
+  }
+}
+#service {
+  margin-top: var(--space);
+  flex-direction: column;
+}
+#service h2 {
+  padding: 0 var(--space);
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
+}
+#service h2 small {
+  color: var(--gray-2);
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+#service > img {
+  width: 100%;
+  margin: var(--space) 0;
+}
+#service > div {
+  flex-direction: column;
+}
+#service > div a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+  margin: 0 var(--space);
+}
+#service > div a:hover {
+  background-color: var(--black-10);
+}
+#service > div a:active {
+  background-color: var(--black-75);
+}
+#service > div a:hover {
+  background-color: var(--green-hover);
+}
+#service > div a:active {
+  background-color: var(--green-active);
+}
+#service > div .icons {
+  flex-direction: column;
+}
+#service > div .icons figure {
+  margin-top: var(--space);
+  flex-direction: column;
+  align-items: center;
+}
+#service > div .icons figure img {
+  width: 45%;
+}
+#service > div .icons figure figcaption {
+  margin: var(--space auto);
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--gray-0);
+}
+
+@media (min-width: 768px) {
+  #service > div {
+    flex-direction: column-reverse;
+  }
+  #service > div .icons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #service > div .icons figure {
+    margin: calc(var(--space) * 5) 0;
+  }
+  #service > div .icons figure img {
+    width: 150px;
+  }
+  #service > div a {
+    width: 200px;
+    margin: calc(var(--space) * 3) auto;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  #service h2 {
+    font-size: 60px;
+  }
+  #service h2 small {
+    font-size: 35px;
+  }
+}
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+.alert.danger {
+  color: var(--danger-color);
+  background-color: var(--danger);
+  border-color: var(--danger-border);
+}
+.alert.success {
+  color: var(--success-color);
+  background-color: var(--success-border);
+  border-color: var(--success-border);
+}
+
+#contact {
+  flex-direction: column;
+}
+#contact > h2 {
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 var(--space);
+}
+#contact p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-1);
+}
+#contact > section {
+  flex-direction: column;
+}
+#contact #map {
+  background-image: url("../images/mapa.png");
+  height: 263px;
+  width: 100%;
+  margin-top: var(--space);
+}
+#contact .contacts {
+  margin: 0;
+  padding: var(--space);
+  margin-top: var(--space);
+  flex-direction: column;
+}
+#contact .contacts li {
+  border: var(--gray-3) 1px solid;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space);
+  margin-bottom: calc(var(--space) * 3);
+  text-align: center;
+  color: var(--gray-1);
+}
+#contact .contacts li img {
+  max-width: 100px;
+  background-color: var(--white);
+  margin: 0 auto;
+  margin-top: -60px;
+  padding: 0 var(--space);
+}
+#contact .contacts li p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 300;
+}
+#contact .contacts li p.title {
+  font-weight: 600;
+  font-size: 25px;
+}
+#contact button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+  width: 100%;
+}
+#contact button:hover {
+  background-color: var(--black-10);
+}
+#contact button:active {
+  background-color: var(--black-75);
+}
+#contact button:hover {
+  background-color: var(--green-hover);
+}
+#contact button:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 1200px) {
+  #contact > h2 {
+    font-size: 60px;
+  }
+  #contact > section {
+    flex-direction: row;
+  }
+  #contact > section form, #contact > section #map {
+    flex: 1;
+  }
+  #contact > section form {
+    max-width: unset;
+  }
+  #contact > section form textarea {
+    min-height: 265px;
+    resize: vertical;
+  }
+  #contact > section #map {
+    margin-left: 0;
+    height: 570px;
+  }
+  #contact .contacts {
+    flex-direction: row;
+  }
+  #contact .contacts li + li {
+    margin-left: var(--space);
+  }
+  button {
+    justify-content: flex-start;
+    width: 200px;
+  }
+}
+#auth {
+  min-width: 300px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#auth .hide {
+  display: none;
+}
+#auth > section {
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#auth > section a {
+  display: contents;
+}
+#auth > section a img {
+  position: absolute;
+  width: 100px;
+  top: 40px;
+  z-index: 1;
+}
+#auth > section p {
+  color: var(--gray-9);
+}
+#auth > section form {
+  margin-top: 170px;
+  position: relative;
+  width: 100vw;
+  left: 0;
+}
+#auth > section form .message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#auth > section form .message img {
+  margin-right: 5px;
+}
+#auth > section form .message span {
+  font-weight: 600;
+  color: var(--dark-0);
+}
+#auth > section form h1 {
+  text-align: center;
+  color: var(--green);
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px auto;
+}
+#auth > section form hr {
+  border: none;
+  border-top: 4px solid var(--red);
+  width: 68px;
+  margin-bottom: 38px;
+}
+#auth > section form .field {
+  width: 100%;
+}
+#auth > section form .actions {
+  justify-content: space-between;
+}
+#auth > section form .actions > div {
+  flex-direction: column;
+}
+#auth > section form .actions > div a {
+  display: flex;
+}
+#auth > section form .actions .link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-0);
+  text-decoration: none;
+}
+#auth > section form .actions .link + .link {
+  margin-top: 10px;
+}
+#auth > section form .actions .link:hover {
+  color: var(--gray-11);
+}
+#auth > section form .actions .link:active {
+  color: var(--black);
+}
+#auth > section form.forget .actions {
+  justify-content: flex-end;
+}
+
+@media (min-width: 500px) {
+  #auth {
+    height: initial;
+    min-height: 100vh;
+  }
+  #auth > section {
+    width: 500px;
+    height: initial;
+  }
+  #auth > section a img {
+    top: 25px;
+  }
+  #auth > section form {
+    border: var(--gray-8) 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    padding: 50px;
+    padding-top: 100px;
+    margin-top: 100px;
+  }
+}
+#schedulles-summary form {
+  margin-top: var(--space);
+}
+
+#schedules-payment {
+  position: relative;
+}
+#schedules-payment > header {
+  height: 260px;
+  min-height: 260px;
+  position: relative;
+}
+#schedules-payment > header h1 {
+  display: none;
+}
+#schedules-payment > main {
+  align-items: center;
+}
+#schedules-payment > main form {
+  max-width: 100%;
+}
+#schedules-payment > main form .form-creditcard {
+  margin-top: var(--space);
+}
+#schedules-payment > main form .form-creditcard .form-fields {
+  flex-direction: column;
+  width: 100%;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields {
+  justify-content: space-between;
+  flex-direction: row;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields .field {
+  width: calc(50% - var(--space) / 2);
+}
+#schedules-payment > main form .form-creditcard .form-card {
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+  perspective: 1000px;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces {
+  transform-style: preserve-3d;
+  transition: tranform 0.6s;
+  width: 300px;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces.flipped {
+  transform: rotateY(180deg);
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg {
+  width: 300px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg.back .name {
+  text-transform: uppercase;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces .back {
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 1200px) {
+  #schedules-payment {
+    position: static;
+  }
+  #schedules-payment > header {
+    height: 160px;
+    min-width: 160px;
+  }
+  #schedules-payment > header h1 {
+    display: block;
+  }
+  #schedules-payment > main {
+    align-items: flex-start;
+  }
+  #schedules-payment > main form {
+    max-width: 900px;
+    justify-content: space-between;
+  }
+  #schedules-payment > main form .form-creditcard .form-card {
+    position: static;
+    justify-content: center;
+    padding-left: var(--space);
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces {
+    width: 100%;
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces svg {
+    width: 340px;
+  }
+}
+#error .desktop {
+  display: none;
+}
+#error header {
+  margin: 0;
+  margin-top: 120px;
+  padding: 0 3em;
+  height: initial;
+}
+#error header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+#error header h1 b {
+  color: var(--red);
+}
+#error .columns, #error .column {
+  flex-direction: column;
+}
+#error p {
+  padding: 0 3em;
+  font-size: 20px;
+  color: var(--gray-0);
+}
+#error img {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+@media (min-width: 575px) {
+  #error {
+    min-height: calc(100vh - 341px);
+  }
+  #error .desktop {
+    display: flex;
+  }
+  #error .mobile {
+    display: none;
+  }
+  #error p {
+    font-size: 16px;
+  }
+  #error .columns {
+    flex-direction: row;
+    align-items: center;
+  }
+  #error .column {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 400px);
   }
 }
 
