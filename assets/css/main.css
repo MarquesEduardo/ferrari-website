@@ -1148,7 +1148,7 @@ header.page-title hr {
 #home .gallery figure figcaption {
   position: absolute;
   left: 0;
-  bottom: var(--space);
+  bottom: 0;
   background-color: var(--black-75);
   color: var(--white);
   padding: var(--space);
@@ -1252,10 +1252,10 @@ header.page-title hr {
   align-items: center;
 }
 #service > div .icons figure img {
-  width: 45%;
+  width: 25%;
 }
 #service > div .icons figure figcaption {
-  margin: var(--space auto);
+  margin: var(--space);
   font-size: 16px;
   font-weight: bold;
   color: var(--gray-0);
@@ -1542,6 +1542,58 @@ header.page-title hr {
     margin-top: 100px;
   }
 }
+.page .options {
+  margin-top: 20px;
+  flex-direction: column;
+}
+.page .options label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.page .options label .square {
+  width: 24px;
+  height: 24px;
+  border: var(--gray-10) 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+.page .options label .square > div {
+  width: 14px;
+  height: 14px;
+  background-color: var(--gray);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.page .options label:hover .square {
+  border: var(--gray-8) 2px solid;
+}
+.page .options label:hover .square > div {
+  opacity: 0.2;
+}
+.page .options label input {
+  display: none;
+}
+.page .options label input:checked + .square > div {
+  opacity: 1;
+  background-color: var(--blue);
+}
+.page .options label .content {
+  flex-direction: column;
+  padding-left: 10px;
+  font-size: 1em;
+  color: var(--dark-0);
+  line-height: 1.5em;
+}
+.page .options label .content .description {
+  font-size: 0.8em;
+  color: var(--gray-2);
+}
+.page .options label .content .price {
+  font-weight: 600;
+}
+
 #schedulles-summary form {
   margin-top: var(--space);
 }
