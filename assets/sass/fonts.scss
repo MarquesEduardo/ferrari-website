@@ -1,41 +1,36 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-family: 'OpenSans';
+    src: local("Open Sans Regular", url('../fonts/OpenSans-Regular.ttf') format("true-type"));
     font-style: normal;
     font-weight: 400;
 }
-
 @font-face {
-    font-family: 'Open Sans';
-    src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Nothing';
-    src: local("Nothing You Could Do"), url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+    font-family: 'OpenSans';
+    src: local("Open Sans Light", url('../fonts/OpenSans-Light.ttf') format("true-type"));
     font-style: normal;
     font-weight: 300;
 }
-
+@font-face {
+    font-family: 'OpenSans';
+    src: local("Open Sans SemiBold", url('../fonts/OpenSans-SemiBold.ttf') format("true-type"));
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: local("Open Sans Bold", url('../fonts/OpenSans-Bold.ttf') format("true-type"));
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Nothing';
+    src: local("Nothing You Could Do", url('../fonts/NothingYouCouldDo-Regular.ttf') format("true-type"));
+    font-style: normal;
+    font-weight: 300;
+}
 @font-face {
     font-family: 'Teko';
-    src: local("Teko"), url("../fonts/Teko-Regular.ttf") format("truetype");
+    src: local("Teko", url('../fonts/Teko-Regular.ttf') format("true-type"));
     font-style: normal;
     font-weight: 400;
 }
