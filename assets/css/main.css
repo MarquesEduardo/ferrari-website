@@ -129,10 +129,11 @@ hr.divider {
   margin: 15px;
   background: none;
   border: none;
-  font-size: 12px;
+  font-size: 20px;
   transition: -3s;
   color: var(--black-50);
   min-width: 50px;
+  box-shadow: none;
 }
 .toast .close:hover {
   color: var(--black-75);
@@ -151,6 +152,7 @@ hr.divider {
 form {
   flex-direction: column;
   width: 100%;
+  padding: 0 2rem;
 }
 form #form-title {
   font-size: 1.5rem;
@@ -245,7 +247,6 @@ form button:active {
 @media (min-width: 1200px) {
   form {
     max-width: 480px;
-    padding: 0 2rem 0 0;
   }
   form .fields {
     flex-direction: row;
@@ -263,10 +264,11 @@ form button:active {
     max-width: 340px;
   }
 }
-.form-landingpage {
-  margin: 0 2rem;
+@media (min-width: 1200px) {
+  .form-landingpage {
+    margin: 0 2rem 0 0;
+  }
 }
-
 header.page-title {
   display: flex;
   flex-direction: column;
