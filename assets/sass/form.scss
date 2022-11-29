@@ -1,7 +1,9 @@
 form {
     flex-direction: column;
     width: 100%;
-    padding: 0 var(--space);
+    #form-title {
+        font-size: 1.5rem;
+    }
     .fields {
         flex-direction: column;
     }
@@ -59,9 +61,10 @@ form {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
     form {
         max-width: 480px;
+        padding: 0 2rem 0 0;
         .fields {
             flex-direction: row;
             .field {
@@ -78,4 +81,8 @@ form {
             max-width: 340px;
         }
     }
+}
+
+.form-landingpage {
+    margin: 0 2rem;
 }
