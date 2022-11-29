@@ -1182,6 +1182,14 @@ header.page-title hr {
 }
 #home .gallery figure img {
   width: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#home .gallery figure img:hover {
+  opacity: 0.8;
 }
 #home .gallery figure figcaption {
   position: absolute;
