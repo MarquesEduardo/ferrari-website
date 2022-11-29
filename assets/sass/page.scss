@@ -23,7 +23,6 @@ header {
     flex-direction: column;
     height: calc(100vh - 140px);
     overflow: auto;
-   
     .page-title {
         margin: var(--space);
         width: calc(100% - calc(var(--space) * 2));
@@ -39,7 +38,6 @@ header {
         border-bottom: var(--gray-3) 1px solid;
         flex-direction: column;
         transition: all 0.2s ease-in-out;
-
         header {
             font-size: 2em;
             color: var(--dark-0);
@@ -114,7 +112,7 @@ header {
         margin-top: 18px;
         h1 {
             font-size: 23px;
-            padding-top: 15px;
+            padding-top: 2rem;
             font-weight: bold;
             text-transform: uppercase;
             small {
@@ -125,7 +123,6 @@ header {
         }
     }
     > main {
-        margin-bottom: 80px;
         flex-direction: column;
         .toast {
             position: fixed;
@@ -182,9 +179,12 @@ header {
         > header {
             justify-content: flex-start;
             padding-left: 185px;
-            min-height: 160px;
+            min-height: 5rem;
             h1 {
-                font-size: 32px;
+                font-size: 24px;
+                text-align: center;
+                margin: 0;
+                padding: 0;
             }
         }
         aside {
