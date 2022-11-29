@@ -1,36 +1,36 @@
 @font-face {
   font-family: "OpenSans";
-  src: local("Open Sans Regular", url("../fonts/OpenSans-Regular.ttf") format("true-type"));
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: local("Open Sans Light", url("../fonts/OpenSans-Light.ttf") format("true-type"));
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "OpenSans";
-  src: local("Open Sans SemiBold", url("../fonts/OpenSans-SemiBold.ttf") format("true-type"));
+  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "OpenSans";
-  src: local("Open Sans Bold", url("../fonts/OpenSans-Bold.ttf") format("true-type"));
+  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
   font-family: "Nothing";
-  src: local("Nothing You Could Do", url("../fonts/NothingYouCouldDo-Regular.ttf") format("true-type"));
+  src: local("Nothing You Could Do"), url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Teko";
-  src: local("Teko", url("../fonts/Teko-Regular.ttf") format("true-type"));
+  src: local("Teko"), url("../fonts/Teko-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
@@ -151,7 +151,9 @@ hr.divider {
 form {
   flex-direction: column;
   width: 100%;
-  padding: 0 var(--space);
+}
+form #form-title {
+  font-size: 1.5rem;
 }
 form .fields {
   flex-direction: column;
@@ -211,6 +213,7 @@ form button {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -220,8 +223,10 @@ form button {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--green);
+  transition: 0.1s ease-in-out;
   color: var(--white);
 }
 form button:hover {
@@ -240,6 +245,7 @@ form button:active {
 @media (min-width: 1200px) {
   form {
     max-width: 480px;
+    padding: 0 2rem 0 0;
   }
   form .fields {
     flex-direction: row;
@@ -257,6 +263,10 @@ form button:active {
     max-width: 340px;
   }
 }
+.form-landingpage {
+  margin: 0 2rem;
+}
+
 header.page-title {
   display: flex;
   flex-direction: column;
@@ -344,6 +354,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -353,6 +364,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   min-width: 50px;
   width: 50px;
@@ -387,7 +399,7 @@ header.page-title hr {
 }
 .page > header h1 {
   font-size: 23px;
-  padding-top: 15px;
+  padding-top: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -397,7 +409,6 @@ header.page-title hr {
   display: block;
 }
 .page > main {
-  margin-bottom: 80px;
   flex-direction: column;
 }
 .page > main .toast {
@@ -427,6 +438,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -436,6 +448,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--gray-3);
   color: var(--gray-0);
@@ -458,6 +471,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -467,6 +481,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--black);
   color: var(--white);
@@ -492,6 +507,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -501,6 +517,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--blue);
   color: var(--white);
@@ -526,6 +543,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -535,8 +553,10 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--green);
+  transition: 0.1s ease-in-out;
   color: var(--white);
 }
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
@@ -556,10 +576,13 @@ header.page-title hr {
   .page > header {
     justify-content: flex-start;
     padding-left: 185px;
-    min-height: 160px;
+    min-height: 5rem;
   }
   .page > header h1 {
-    font-size: 32px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
   .page aside {
     width: 375px;
@@ -623,6 +646,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -632,6 +656,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   border: var(--gray-2) 2px solid;
   border-radius: var(--border-radius);
@@ -717,20 +742,25 @@ header.page-title hr {
     margin: var(--space) 0;
   }
   .calendar .month h2 {
-    font-size: 44px;
+    font-size: 33px;
   }
   .calendar .month .btn-today {
     display: flex;
+    width: 3rem;
   }
   .calendar .weekdays li {
     font-size: 21px;
     font-weight: bold;
+    justify-content: space-around;
+    padding-right: 3rem;
   }
   .calendar .days {
-    grid-template-rows: repeat(5, 141.7142857143px);
+    grid-template-rows: repeat(5, 80px);
   }
   .calendar .days li {
-    font-size: 38px;
+    font-size: 24px;
+    height: 5rem;
+    width: 5rem;
   }
 }
 #header {
@@ -857,6 +887,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -866,8 +897,10 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--green);
+  transition: 0.1s ease-in-out;
   color: var(--white);
 }
 #header .menu .btn-register:hover {
@@ -987,11 +1020,13 @@ header.page-title hr {
 }
 #footer {
   width: 100%;
+  height: 25rem;
   min-width: 320px;
   background-color: var(--dark-0);
   position: relative;
   flex-direction: column;
   padding: var(--space);
+  justify-content: space-between;
   align-items: center;
   color: var(--gray-0);
 }
@@ -1018,6 +1053,7 @@ header.page-title hr {
   width: 100%;
   flex-direction: column;
   align-items: center;
+  padding-top: 0.5rem;
 }
 #footer .columns .links {
   display: none;
@@ -1060,13 +1096,13 @@ header.page-title hr {
 
 @media (min-width: 1200px) {
   #footer {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 0;
+    padding: 0 100px;
+    height: 20rem;
   }
   #footer .columns {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 1.5rem;
   }
   #footer .columns .links {
     display: flex;
@@ -1109,6 +1145,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -1118,6 +1155,7 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   border: var(--white) 2px solid;
   color: var(--white);
@@ -1148,19 +1186,24 @@ header.page-title hr {
 #home .gallery figure figcaption {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1rem;
   background-color: var(--black-75);
   color: var(--white);
-  padding: var(--space);
+  padding: 0.5rem 1rem;
 }
 #home .gallery figure figcaption h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 #home .gallery figure figcaption a {
   margin: 0;
   font-size: 9px;
+  color: var(--gray-3);
+}
+#home .gallery figure figcaption p {
+  margin: 0;
+  font-size: 12px;
   color: var(--gray-3);
 }
 
@@ -1187,16 +1230,16 @@ header.page-title hr {
   }
 }
 #service {
-  margin-top: var(--space);
   flex-direction: column;
 }
 #service h2 {
   padding: 0 var(--space);
-  margin: 0;
+  margin: 6rem 2rem 1rem 2rem;
   font-size: 27px;
   font-weight: bold;
   color: var(--dark-0);
   text-transform: uppercase;
+  text-align: center;
 }
 #service h2 small {
   color: var(--gray-2);
@@ -1206,7 +1249,7 @@ header.page-title hr {
 }
 #service > img {
   width: 100%;
-  margin: var(--space) 0;
+  margin: 0;
 }
 #service > div {
   flex-direction: column;
@@ -1217,6 +1260,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -1226,10 +1270,12 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--green);
+  transition: 0.1s ease-in-out;
   color: var(--white);
-  margin: 0 var(--space);
+  margin: var(--space);
 }
 #service > div a:hover {
   background-color: var(--black-10);
@@ -1252,7 +1298,7 @@ header.page-title hr {
   align-items: center;
 }
 #service > div .icons figure img {
-  width: 25%;
+  width: 7rem;
 }
 #service > div .icons figure figcaption {
   margin: var(--space);
@@ -1262,6 +1308,13 @@ header.page-title hr {
 }
 
 @media (min-width: 768px) {
+  #service h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  #service h2 small {
+    font-size: 2rem;
+  }
   #service > div {
     flex-direction: column-reverse;
   }
@@ -1270,10 +1323,10 @@ header.page-title hr {
     justify-content: space-around;
   }
   #service > div .icons figure {
-    margin: calc(var(--space) * 5) 0;
+    margin: 2rem 0;
   }
   #service > div .icons figure img {
-    width: 150px;
+    width: 7rem;
   }
   #service > div a {
     width: 200px;
@@ -1283,10 +1336,12 @@ header.page-title hr {
 }
 @media (min-width: 992px) {
   #service h2 {
-    font-size: 60px;
+    text-align: left;
   }
-  #service h2 small {
-    font-size: 35px;
+}
+@media (max-width: 400px) {
+  #service h2 {
+    margin: 5rem 0;
   }
 }
 .alert {
@@ -1315,8 +1370,9 @@ header.page-title hr {
   font-weight: bold;
   color: var(--dark-0);
   text-transform: uppercase;
-  margin: 0;
+  margin: 6rem 2rem 3rem 2rem;
   padding: 0 var(--space);
+  text-align: center;
 }
 #contact p {
   font-size: 14px;
@@ -1327,10 +1383,10 @@ header.page-title hr {
   flex-direction: column;
 }
 #contact #map {
-  background-image: url("../images/mapa.png");
   height: 263px;
   width: 100%;
   margin-top: var(--space);
+  border: 0;
 }
 #contact .contacts {
   margin: 0;
@@ -1349,15 +1405,19 @@ header.page-title hr {
   color: var(--gray-1);
 }
 #contact .contacts li img {
-  max-width: 100px;
+  width: 6rem;
   background-color: var(--white);
-  margin: 0 auto;
+  margin: 1rem auto;
   margin-top: -60px;
   padding: 0 var(--space);
 }
+#contact .contacts li .img-location {
+  width: 5.5rem;
+  margin-bottom: 0.5rem;
+}
 #contact .contacts li p {
   margin: 0;
-  font-size: 25px;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 #contact .contacts li p.title {
@@ -1370,6 +1430,7 @@ header.page-title hr {
   height: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 16px;
   font-weight: bold;
@@ -1379,8 +1440,10 @@ header.page-title hr {
   cursor: pointer;
   border-radius: var(--border-radius);
   background: transparent;
+  transition: 0.1s ease-in-out;
   color: var(--black);
   background-color: var(--green);
+  transition: 0.1s ease-in-out;
   color: var(--white);
   width: 100%;
 }
@@ -1398,9 +1461,6 @@ header.page-title hr {
 }
 
 @media (min-width: 1200px) {
-  #contact > h2 {
-    font-size: 60px;
-  }
   #contact > section {
     flex-direction: row;
   }
@@ -1416,7 +1476,7 @@ header.page-title hr {
   }
   #contact > section #map {
     margin-left: 0;
-    height: 570px;
+    height: auto;
   }
   #contact .contacts {
     flex-direction: row;
@@ -1427,6 +1487,13 @@ header.page-title hr {
   button {
     justify-content: flex-start;
     width: 200px;
+  }
+}
+@media (min-width: 768px) {
+  #contact > h2 {
+    text-align: left;
+    padding: 0;
+    font-size: 3rem;
   }
 }
 #auth {
@@ -1506,7 +1573,8 @@ header.page-title hr {
   font-size: 14px;
   font-weight: 600;
   color: var(--dark-0);
-  text-decoration: none;
+  text-decoration: underline;
+  font-style: italic;
 }
 #auth > section form .actions .link + .link {
   margin-top: 10px;
@@ -1518,7 +1586,8 @@ header.page-title hr {
   color: var(--black);
 }
 #auth > section form.forget .actions {
-  justify-content: flex-end;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 500px) {
