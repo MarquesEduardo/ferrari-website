@@ -95,23 +95,27 @@
         .month {
             margin: var(--space) 0;
             h2 {
-                font-size: 44px;
+                font-size: 33px;
             }
             .btn-today {
                 display: flex;
+                width: 3rem;
             }
         }
         .weekdays {
             li {
                 font-size: 21px;
                 font-weight: bold;
+                justify-content: space-around;
+                padding-right: 3rem;
             }
         }
         .days {
-            grid-template-rows: repeat(5, calc(992px / 7));
+            grid-template-rows: repeat(5, 80px);
             li {
-                font-size: 38px;
-
+                font-size: 24px;
+                height: 5rem;
+                width: 5rem;
             }
         }
     }
