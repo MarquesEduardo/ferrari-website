@@ -165,7 +165,7 @@ form .field {
   margin-bottom: var(--space);
 }
 form .field label {
-  color: var(--gray-3);
+  color: var(--gray-2);
   font-size: 14px;
   position: absolute;
   top: 10px;
@@ -698,7 +698,7 @@ header.page-title hr {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 12vw);
-  grid-gap: 10px;
+  grid-gap: 5px;
   color: var(--dark-0);
 }
 .calendar .days li {
@@ -734,7 +734,7 @@ header.page-title hr {
   background-color: var(--green-active);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .calendar {
     max-width: 992px;
   }
@@ -1595,7 +1595,7 @@ header.page-title hr {
 }
 #auth > section form.forget .actions {
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 500px) {
