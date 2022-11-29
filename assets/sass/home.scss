@@ -44,7 +44,15 @@
             position: relative;
             img {
                 width: 100%;
+                width: 100%;
+                opacity: 1;
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+                cursor: pointer;
             }
+                img:hover {
+                    opacity: .8;
+                    }
             figcaption {
                 position: absolute;
                 left: 0;
