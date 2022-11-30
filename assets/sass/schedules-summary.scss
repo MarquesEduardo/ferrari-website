@@ -1,5 +1,9 @@
-#schedulles-summary {
+#schedules-summary {
     form {
         margin-top: var(--space);
+    }
+    #valor__total {
+        color: var(--green);
+        font-weight: bold;
     }
 }
