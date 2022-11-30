@@ -6,7 +6,7 @@
             cursor: pointer;
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
+            margin-bottom: 3rem;
             .square {
                 width: 24px;
                 height: 24px;
@@ -47,12 +47,14 @@
                 font-size: 1em;
                 color: var(--dark-0);
                 line-height: 1.5em;
-
-                .description {
-                    font-size: 0.8em;
-                    color: var(--gray-2);
+                .name {
+                    font-size: 16px;
+                    font-weight: 600;
                 }
-
+                .description {
+                    font-size: 0.9em;
+                    color: var(--gray-1);
+                }
                 .price {
                     font-weight: 600;
                 }

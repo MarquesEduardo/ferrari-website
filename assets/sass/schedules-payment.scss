@@ -12,6 +12,7 @@
         align-items: center;
         form {
             max-width: 100%;
+            padding: 0 2rem 3rem 2rem;
             .form-creditcard {
                 margin-top: var(--space);
                 .form-fields {
@@ -63,7 +64,8 @@
     #schedules-payment {
         position: static;
         > header {
-            height: 160px;
+            height: 5rem;
+            min-height: 5rem;
             min-width: 160px;
             h1 {
                 display: block;
