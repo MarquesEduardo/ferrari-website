@@ -168,7 +168,7 @@ form .field {
 }
 form .field label {
   color: var(--gray-2);
-  font-size: 14px;
+  font-size: 15px;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -201,7 +201,7 @@ form .field input[readonly], form .field textarea[readonly], form .field select[
   border: none;
   color: var(--black);
   font-weight: bold;
-  font-size: 22px;
+  font-size: 16px;
   text-transform: uppercase;
   padding-bottom: 0;
 }
@@ -1093,7 +1093,7 @@ header.page-title hr {
 }
 #footer p {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 @media (min-width: 1200px) {
@@ -1629,7 +1629,7 @@ header.page-title hr {
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
 .page .options label .square {
   width: 24px;
@@ -1665,16 +1665,24 @@ header.page-title hr {
   color: var(--dark-0);
   line-height: 1.5em;
 }
+.page .options label .content .name {
+  font-size: 16px;
+  font-weight: 600;
+}
 .page .options label .content .description {
-  font-size: 0.8em;
-  color: var(--gray-2);
+  font-size: 0.9em;
+  color: var(--gray-1);
 }
 .page .options label .content .price {
   font-weight: 600;
 }
 
-#schedulles-summary form {
+#schedules-summary form {
   margin-top: var(--space);
+}
+#schedules-summary #valor__total {
+  color: var(--green);
+  font-weight: bold;
 }
 
 #schedules-payment {
@@ -1693,6 +1701,7 @@ header.page-title hr {
 }
 #schedules-payment > main form {
   max-width: 100%;
+  padding: 0 2rem 3rem 2rem;
 }
 #schedules-payment > main form .form-creditcard {
   margin-top: var(--space);
@@ -1741,7 +1750,8 @@ header.page-title hr {
     position: static;
   }
   #schedules-payment > header {
-    height: 160px;
+    height: 5rem;
+    min-height: 5rem;
     min-width: 160px;
   }
   #schedules-payment > header h1 {
