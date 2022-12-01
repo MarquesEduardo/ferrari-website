@@ -487,6 +487,7 @@ header.page-title hr {
   color: var(--black);
   background-color: var(--black);
   color: var(--white);
+  min-width: 190px;
 }
 .page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
   background-color: var(--black-10);
@@ -1621,6 +1622,10 @@ header.page-title hr {
     margin-top: 100px;
   }
 }
+.page h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
 .page .options {
   margin-top: 20px;
   flex-direction: column;
@@ -1629,7 +1634,10 @@ header.page-title hr {
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.page .options label span {
+  margin-left: 1rem;
 }
 .page .options label .square {
   width: 24px;
@@ -1675,6 +1683,9 @@ header.page-title hr {
 }
 .page .options label .content .price {
   font-weight: 600;
+}
+.page .options label:hover {
+  color: var(--blue);
 }
 
 #schedules-summary form {
@@ -1887,6 +1898,7 @@ header.page-title hr {
   background-color: var(--green);
   transition: 0.1s ease-in-out;
   color: var(--white);
+  min-width: 170px;
 }
 #schedules-complete main footer.fixed a:hover {
   background-color: var(--black-10);
@@ -2158,6 +2170,10 @@ header.page-title hr {
 #schedules {
   padding-bottom: 20px;
 }
+#schedules .page-main-body {
+  align-items: center;
+  text-align: center;
+}
 #schedules footer.fixed {
   justify-content: center;
 }
@@ -2226,6 +2242,10 @@ header.page-title hr {
 }
 
 @media (min-width: 992px) {
+  #schedules .page-main-body {
+    align-items: flex-start;
+    text-align: left;
+  }
   #schedules footer.fixed {
     justify-content: flex-start;
   }
@@ -2233,6 +2253,7 @@ header.page-title hr {
     flex-direction: row;
     justify-content: space-between;
     width: fit-content;
+    padding: 10px 0 0 0;
   }
   #schedules ul li > section {
     flex-wrap: nowrap;
@@ -2254,6 +2275,10 @@ header.page-title hr {
   }
   #schedules ul li:first-child > section > div label {
     display: flex;
+  }
+  #schedules ul li + li {
+    margin: 10px 0;
+    padding-top: 20px;
   }
 }
 
