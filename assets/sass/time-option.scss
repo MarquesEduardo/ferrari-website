@@ -1,0 +1,50 @@
+#time-options {
+    h3 {
+        margin: 20px 0;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .options {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        label {
+            width: calc(50% - 10px);
+            margin-bottom: 10px;
+          span {
+            @include button;
+            display: flex;
+            width: 100%;
+            background-color: var(--gray-10);
+            color: var(--dark-0);
+          }
+          input {
+            display: none;
+            &:checked+span {
+                background-color: var(--blue);
+                color: var(--white);
+            }
+          }
+       }
+    }
+}
+@media (min-width: 992px){
+    #time-options {
+        &.page {
+            form {
+                min-width: 900px;
+            }
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .options {
+            justify-content: flex-start;
+
+            label {
+                width: calc(25% - 20px);
+                margin-right: 20px;
+            }
+        }
+    }
+}
