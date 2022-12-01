@@ -1,4 +1,8 @@
 #schedules {
+    .page-main-body{
+        align-items: center;
+        text-align: center;
+    }
     padding-bottom: 20px;
     footer.fixed {
         justify-content: center;
@@ -39,6 +43,10 @@
 }
 @media (min-width: 992px){
     #schedules {
+        .page-main-body {
+            align-items: flex-start;
+            text-align: left;
+        }
         footer.fixed {
             justify-content: flex-start;
         }
@@ -47,15 +55,16 @@
                 flex-direction: row;
                 justify-content: space-between;
                 width: fit-content;
+                padding: 10px 0 0 0;
                 >section {
                     flex-wrap: nowrap;
                     flex: 1;
                     max-width: 1000px;
-
+                    
                     >div {
                         width: initial;
                         min-width: 200px;
-                       
+                        
                         label {
                             display: none;
                         }
@@ -76,6 +85,10 @@
                         }
                     }
                 }
+            }
+            li+li {
+                margin: 10px 0;
+                padding-top: 20px;
             }
         }
     }
