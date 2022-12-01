@@ -150,6 +150,7 @@ header {
         }
         button[type=submit], a.black {
             @include button-black;
+            min-width: 190px;
         }
     }
     &.blue {
